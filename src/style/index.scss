@@ -1,0 +1,48 @@
+@import './font-awesome.scss';
+
+$color: #888;
+html {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #ccc;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: $color;
+    transition: transform 1s;
+}
+
+.img-box{
+    width: 200px;
+    height: 200px;
+}
+.img-box .img{
+    display: block;
+}
+.img-box .img.img1{
+    background: url("../images/rd_item1.png") no-repeat;
+    width: 234px;
+    height: 277px;
+}
+.img-box .img.img2{
+    background: url("../images/rd_item2.png") no-repeat;
+    width: 234px;
+    height: 277px;
+}
+.img-box .img.img3{
+    background: url("../images/sprites/rd_item3.png") no-repeat;
+    width: 318px;
+    height: 382px;
+}
+.img-box .img.img4{
+    background: url("../images/sprites/rd_item4.png?s") no-repeat;
+    width: 318px;
+    height: 382px;
+}
+
+.text-box{
+    margin: 0;
+}
