@@ -1,5 +1,6 @@
 import common from './common'
 
 export default () => {
-    console.log("this is b")
+    common()
+    console.log('this is b')
 }

@@ -2,10 +2,11 @@
 import a from './components/a'
 import b from './components/b'
 
-import "./style/normalize.scss"
-import "./style/index.scss"
+import './style/normalize.scss'
+import './style/index.scss'
 
 a()
+b()
 
 // console.log(_.Chunk([5,4,6,7,8,5],2));
 
@@ -18,13 +19,13 @@ a()
 //     length: 3
 // }))
 
-//测试第三方库，jquery
+// 测试第三方库，jquery
 // $(".img").addClass("active")
 
-$.get('/api/comments/show',{
-    id:'4193586758833502',
+$.get('/api/comments/show', {
+    id: '4193586758833502',
     page: 1
-},function (param) { 
+}, function (param) {
     console.log(param)
- })
- console.log("fff")
+})
+console.log('fff')

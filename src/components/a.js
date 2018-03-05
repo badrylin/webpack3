@@ -1,5 +1,6 @@
-import common from './common'
+import Common from './common'
 
 export default () => {
-    console.log("this is a")
+    Common()
+    console.log('this is a')
 }

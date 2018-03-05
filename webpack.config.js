@@ -3,6 +3,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const PurifyCSS = require("purifycss-webpack")
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 const webpack = require('webpack')
 const path = require('path')
@@ -20,11 +21,9 @@ module.exports = {
     module: {
         rules: [{
                 test: /\.js$/,
-                use: {
-                    loader: 'babel-loader'
-                },
                 exclude: [/(node_modules|bower_components)/,path.resolve(__dirname, './src/libs')],
-                include: [path.resolve(__dirname, './src')]
+                include: [path.resolve(__dirname, './src')],
+                use: ['babel-loader','eslint-loader']
             },
             {
                 test: /\.scss$/,
@@ -83,6 +82,7 @@ module.exports = {
         clientLogLevel: 'warning',
         historyApiFallback: true,
         port: '6080',
+        overlay: true,
         hot: true,
         compress: true,
         noInfo: true,
@@ -130,6 +130,7 @@ module.exports = {
             $: 'jquery'
         }),
         new webpack.HotModuleReplacementPlugin(),
-        new webpack.NamedModulesPlugin()
+        new webpack.NamedModulesPlugin(),
+        // new BundleAnalyzerPlugin()
     ]
 }
