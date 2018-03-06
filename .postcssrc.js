@@ -13,5 +13,5 @@ module.exports = {
 			spritePath:"./dist/img"
 		}
 	}
-  }
+}
   

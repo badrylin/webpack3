@@ -6,7 +6,8 @@ import './style/normalize.scss'
 import './style/index.scss'
 
 a()
-b()
+// b()
+console.log("a")
 
 // console.log(_.Chunk([5,4,6,7,8,5],2));
 
